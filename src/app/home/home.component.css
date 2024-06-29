@@ -1,0 +1,34 @@
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 10px; /* Adjust the gap between images as needed */
+  }
+  
+  .image-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .image-item img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .image-title {
+    margin-top: 5px; /* Adjust the space between the image and the title */
+    font-size: 14px; /* Adjust the font size as needed */
+    text-align: center;
+  }
+  .image-price {
+    margin-top: 5px; /* Adjust the space between the image and the title */
+    font-size: 14px; /* Adjust the font size as needed */
+    text-align: center;
+  }
+  .image-pieces {
+    margin-top: 5px; /* Adjust the space between the image and the title */
+    font-size: 14px; /* Adjust the font size as needed */
+    text-align: center;
+  }
