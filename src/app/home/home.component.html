@@ -1,22 +1,10 @@
-
-<!-- <section  class="section section-xxl bg-default flex margin-left-20 ">
-<div style="width: 100%; height: 1000px; text-align:center;margin:0; padding:0;">
-    <ng-image-slider #nav
-      [images]="imageObject"
-      [infinite]="false"
-      [autoSlide]="1"
-      [imageSize]="{width: '100%', height: '100%'}"
-      slideImage="1">
-    </ng-image-slider>
-</div>
-
-</section> -->
 <div class="image-grid">
   <div *ngFor="let image of imageObject" class="image-item">
+    <div (click)="navigateToDetail(image.id)">
     <img [src]="image.image" [alt]="image.alt"  [title]="image.title">
     <div class="image-title">{{ image.title }}</div>
     <div class="image-price">${{ image.price }}</div>
     <div class="image-pieces">Availabe in store: {{ image.pieces }}</div>
-
+  </div>
   </div>
 </div>

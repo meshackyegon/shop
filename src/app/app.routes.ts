@@ -6,11 +6,17 @@ import { ContactComponent } from './contact/contact.component';
 import { ServicesComponent } from './services/services.component';
 import { BlogComponent } from './blog/blog.component';
 import { LoginComponent } from './login/login.component';
+import { DetailComponent }  from './detail/detail.component';
 
 
 export const routes: Routes = [
     { path: '', redirectTo: '/home', pathMatch: 'full' },
-    { path: 'home', component: HomeComponent },
+    { path: 'home', component: HomeComponent ,
+      children: [
+        { path: 'detail/:id', component: DetailComponent }
+     ],
+
+    },
     { path: 'about', component: AboutComponent },
     { path: 'contact', component: ContactComponent },
     { path: 'services', component: ServicesComponent},
