@@ -7,13 +7,15 @@ import { ServicesComponent } from './services/services.component';
 import { BlogComponent } from './blog/blog.component';
 import { LoginComponent } from './login/login.component';
 import { DetailComponent }  from './detail/detail.component';
+import { ProductComponent } from './product/product.component';
 
 
 export const routes: Routes = [
     { path: '', redirectTo: '/home', pathMatch: 'full' },
-    { path: 'home', component: HomeComponent ,
+    { path: 'products', component: ProductComponent,
       children: [
-        { path: 'detail/:id', component: DetailComponent }
+        { path: '', component: HomeComponent, pathMatch:'full'},
+        { path: ':id', component: DetailComponent }
      ],
 
     },

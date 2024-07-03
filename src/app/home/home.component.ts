@@ -126,7 +126,7 @@ export class HomeComponent {
   constructor(private router: Router) {}
 
   navigateToDetail(imageId: number) {
-    this.router.navigate(['/detail', imageId]);
+    this.router.navigate(['/products',imageId]);
   }
 
 }

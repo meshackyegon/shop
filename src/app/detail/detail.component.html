@@ -1,1 +1,22 @@
-<p>detail works!</p>
+<div class="content">
+    <div>
+        <a (click)="openWhatsApp()" class="whatsapp-icon">
+            <img src="assets/whatsapp.jpeg" alt="WhatsApp">
+        </a>
+       
+    </div>
+    <div>
+        <a (click)="openEmail()" class="email-icon">
+            <img src="assets/email.png" alt="Email">
+          </a>
+    </div>
+</div>
+
+<div class="image-grid">
+    <div *ngIf="selectedProduct">
+        <h2>{{ selectedProduct.title }}</h2>
+        <div class="product-images">
+          <img *ngFor="let imageUrl of selectedProduct.imageUrls" [src]="imageUrl" alt="{{ selectedProduct.title }}">
+        </div>
+      </div>
+</div>
