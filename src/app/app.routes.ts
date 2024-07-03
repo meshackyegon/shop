@@ -11,14 +11,16 @@ import { ProductComponent } from './product/product.component';
 
 
 export const routes: Routes = [
-    { path: '', redirectTo: '/home', pathMatch: 'full' },
-    { path: 'products', component: ProductComponent,
+    { path: 'home', redirectTo: '/home', pathMatch: 'full' },
+    { path: '', component: ProductComponent,
       children: [
         { path: '', component: HomeComponent, pathMatch:'full'},
-        { path: ':id', component: DetailComponent }
+        { path: 'products/:id', component: DetailComponent }
+        
      ],
-
     },
+    //  { path: 'products/:id', component: DetailComponent },
+   
     { path: 'about', component: AboutComponent },
     { path: 'contact', component: ContactComponent },
     { path: 'services', component: ServicesComponent},
