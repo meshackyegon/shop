@@ -1,0 +1,45 @@
+.content{
+  height: 100px;
+  display: flex;
+  margin-left: 90%;
+  margin-top: 5px;
+  /* background-color: darkslategray; */
+}
+.whatsapp-icon {
+    display: inline-block;
+    cursor: pointer;
+  }
+  
+  .whatsapp-icon img {
+    width: 40px;
+    height: 40px;
+  }
+  .email-icon {
+    display: inline-block;
+    cursor: pointer;
+  }
+  
+  .email-icon img {
+    width: 40px;
+    height: 40px;
+  }
+  .product-images {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .product-images img {
+    width: 250px;
+    height: 250px;
+    margin: 5px;
+  }
+  .image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 10px; /* Adjust the gap between images as needed */
+  }
+  .image-title {
+    margin-top: 5px; /* Adjust the space between the image and the title */
+    font-size: 14px; /* Adjust the font size as needed */
+    text-align: center;
+  }
